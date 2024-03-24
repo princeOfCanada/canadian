@@ -1,0 +1,14 @@
+Why I decided to develop this GUI application and how is it related to the Theme of TruHack contest?
+
+
+I am exploring the health and well-being domain. When I thought about well-being, I remembered how managing different tasks, homework due dates, meeting dates, etc make it stressful for me to manage my daily study routines and responsibilities.
+
+To help the students manage their busy study routines, first I thought of creating a to-do application by using Java GUI. Then, I thought maybe I should create an application that would encourage me to write about everyday life (diary app). 
+
+Later, I thought why not combine both of these two ideas. Essentially, creating an app that will make it easy for me to share my thoghts and create lists to manage my everyday tasks.
+
+How I am going to manage both of these by using an intuitive interaction methods. I was new to Discord and I was impressed by the tag based topic organization of Discord.
+
+Thereofer, I thought of using tag based information organization of my daily task management and thought sharing app. Basically, the app will oragnize all these data by using tags. It should be super easy to create tags and then allow students to add information that are specific to that tags. It would also make it very easy for the students to locate and search information around that tags.
+
+I believe, such an app will help me better manage my daily study routines, volunteering activities, and other responsibilities in an easy way. WIth that thought I am starting my application development.

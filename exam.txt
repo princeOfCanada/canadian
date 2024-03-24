@@ -1,0 +1,5 @@
+The final exam for Science will held on April 30      ##exam
+The quiz science is going to be held on March 6      ##exam
+The Social Studies first final exam would be on April 14     ##exam
+Physical education exam is on Saturday April 27    ##exam
+New java exam is scheduled on May 5 ##exam
