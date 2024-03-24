@@ -39,6 +39,8 @@ public class CTagManager {
 
 	// gets the added tag name
 	String getTagNameFromText(String entryText) {
+		// I learned this idea from this article
+		// https://www.w3schools.com/java/ref_string_indexof.asp
 		int index = entryText.indexOf('#');
 		String tagName = "";
 		if (index >= 0)
@@ -47,6 +49,8 @@ public class CTagManager {
 	}
 
 	// returns the index of the tagName in the List
+	// consulted the following website
+	// https://stackoverflow.com/questions/18305516/wants-to-get-selected-index-fron-a-jlist-but-returns-1
 	int getSelectedTagIndex(String tagName) {
 		for (int i = 0; i < elements.size(); i++) {
 			if (tagName.equalsIgnoreCase(elements.get(i)))
@@ -58,9 +62,12 @@ public class CTagManager {
 	// checks whether the added tag is new
 	boolean checkNewTagName(String entryText) {
 		int index = entryText.indexOf('#');
+
 		String tagName = entryText.substring(index);
 		boolean flag = false;
 		for (int i = 0; i < elements.size(); i++) {
+			// I learned thsi idea from the follwoing web articl
+			// https://www.geeksforgeeks.org/compare-two-strings-in-java/
 			if (tagName.equalsIgnoreCase(elements.get(i)))
 				flag = true;
 		}
@@ -121,6 +128,8 @@ public class CTagManager {
 		myList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		myList.setLayoutOrientation(JList.VERTICAL); // one element in one row
 
+		// I learned this idea from here
+		// https://www.tutorialspoint.com/how-to-select-the-second-index-in-java-jlist
 		// make the first item selected
 		myList.setSelectedIndex(0);
 

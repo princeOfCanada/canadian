@@ -17,10 +17,9 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-public class CMain implements ActionListener {
+public class CMain {
 
 	final int SIZE = 9;
-	// Buttons to hold the selection values
 
 	// to input a new idea or text
 	JTextArea enterText;
@@ -37,12 +36,16 @@ public class CMain implements ActionListener {
 	JMultiLineLabel mySelectedTextInsideDialogWindow;
 	JMultiLineLabel myInspiringText;
 
-	// constructor
+	// The first function that is called for the application object
+	// here we create the GUI
+	// i consulted the following web articl:
+	// https://www.guru99.com/java-swing-gui.html
 	public CMain(String title) {
 		final String MESSAGE_EMPTY = "Click list item to see detailed description. Double click a list item on the right to remove it.";
 		final int HEIGHT = 700;
 		todoMainWindowApp = new JFrame(title);
 		mySelectedTextInsideDialogWindow = new JMultiLineLabel(MESSAGE_EMPTY);
+
 
 		// load inspiring quotes
 		CLoadInspiringQuotes myInspiringQuotes = new CLoadInspiringQuotes();
@@ -116,14 +119,14 @@ public class CMain implements ActionListener {
 		myItemsList.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent evt) {
 
-				if (evt.getClickCount() == 2) {
+				if (evt.getClickCount() == 2) { // 2 clicks or double clicks
 					listControl.removeSelectedElement();
 					// reset the description text
 					mySelectedTextInsideDialogWindow.setText(MESSAGE_EMPTY);
 
 				}
 
-				else {
+				else { // single click event
 
 				JList list = (JList) evt.getSource();
 				int listSize = list.getModel().getSize();
@@ -246,39 +249,32 @@ public class CMain implements ActionListener {
 					// debugging purpose
 					// System.out.println(myItemsList.getModel().getSize());
 					myItemsList.validate();
-
 				}
-
           }
 		});
-		textBoxPanel.add(myMainButton);
+
+		textBoxPanel.add(myMainButton); // the textbox and the add button
 
 		centerPanel.add(textBoxPanel);
 
+		// I learned the layout manager from the following website
+		// https://www.javatpoint.com/java-layout-manager
 		// adding all the panels to the main window
-
 		todoMainWindowApp.setLayout(new BorderLayout());
 		todoMainWindowApp.add(leftPanel, BorderLayout.WEST);
 
 		todoMainWindowApp.add(centerPanel, BorderLayout.CENTER);
-
-		// gWindow.add(southPanel, BorderLayout.SOUTH);
 
 		todoMainWindowApp.setSize(980, HEIGHT + 40);
 		todoMainWindowApp.setVisible(true);
 		todoMainWindowApp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
-	// Handles click events
-	public void actionPerformed(ActionEvent event) {
 
-
-	} // actionPerformed function ends
-
-	// main driver program
+	// application program
 	public static void main(String[] args) {
-		// create an object of the TikTakToe class
-		CMain toDoManagerWindow = new CMain("Motivational ToDo Manager for Well-being");
+		// The main program is created here
+		CMain toDoManagerWindow = new CMain("Motivational ToDo Manager Well-being Theme");
 	}
 
 }

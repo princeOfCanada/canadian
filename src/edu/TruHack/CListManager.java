@@ -68,6 +68,7 @@ public class CListManager {
 		elements = allMyListItems.getReadListItems();
 	}
 
+	// add one element adn immediately save it to file
 	public void addElement(String elem) {
 		String clearedTxt = "";
 		for (int i = 0; i < elem.length(); i++) {
@@ -87,6 +88,7 @@ public class CListManager {
 		saveListItemsToFile();
 	}
 
+	// save all the contents to the file
 	public void saveListItemsToFile() {
 		String fileNameFromTag = "";
 		try {
@@ -175,6 +177,8 @@ public class CListManager {
 			}
 		}
 		// Now the list can use the color render to have different background colors
+		// https://coderanch.com/t/641342/java/Changing-color-JList-item
+
 		myList.setCellRenderer(new MyListCellRenderer());
 		return myList;
 	}

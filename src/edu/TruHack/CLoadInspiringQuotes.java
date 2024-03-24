@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+// I learned this idea by consulting this website
+// https://stackoverflow.com/questions/9413309/how-do-i-write-a-random-quote-generator-in-java-for-android
 public class CLoadInspiringQuotes {
 	ArrayList<String> elements;
 
